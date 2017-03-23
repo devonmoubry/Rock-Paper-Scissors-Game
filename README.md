@@ -12,6 +12,6 @@ TIY Week 4, Day 18 — Group Project
 
 ## Project Team
 - Devon Moubry
-- Charli Elwongr
+- Charli Elwonger
 - Terrel Harris
 - Neal "NAS" Studzinki
