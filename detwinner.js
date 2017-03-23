@@ -11,17 +11,21 @@ function determineWinner(p1choice,p2choice) {
     winner = "tie";
   }
   else if (p1choice === 'rock' && p2choice === 'paper') {
-    winner = 'player2' }
+    winner = 'player2'; }
   else if (p1choice === 'rock' && p2choice === 'scissors') {
-    winner =  'player1'  }
+    winner =  'player1';  }
   else if (p1choice === 'scissors' && p2choice === 'rock') {
-    winner =  'player2' }
+    winner =  'player2'; }
   else if (p1choice === 'scissors' && p2choice === 'paper') {
-    winner = 'player1' }
+    winner = 'player1'; }
   else if (p1choice === 'paper' && p2choice === 'scissors') {
-    winner = 'player2' }
+    winner = 'player2'; }
   else if (p1choice === 'paper' && p2choice === 'rock') {
-    winner = 'player1' }
+    winner = 'player1'; }
+  else {
+    console.log('no winner!');
+    winner = undefined;
+  }
   console.log(winner);
   displayWinner(winner);
 
