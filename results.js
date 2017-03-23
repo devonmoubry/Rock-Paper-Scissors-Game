@@ -1,4 +1,5 @@
 function displayWinner(winner) {
+  console.log('\n::: Displaying Winner :::');
   if (winner === 'tie') {
     console.log('It’s a tie! Everybody is a winner!');
   } else if (winner === 'player1') {

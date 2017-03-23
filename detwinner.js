@@ -6,6 +6,7 @@
 
 
 function determineWinner(p1choice,p2choice) {
+  console.log('\n::: Comparing Choices :::');
   var winner = "";
   if (p1choice === p2choice) {
     winner = "tie";
@@ -23,10 +24,10 @@ function determineWinner(p1choice,p2choice) {
   else if (p1choice === 'paper' && p2choice === 'rock') {
     winner = 'player1'; }
   else {
-    console.log('no winner!');
+    console.log('no winner! (ERROR???)');
     winner = undefined;
   }
-  console.log(winner);
+  console.log('Winner Determined : ' + winner);
   displayWinner(winner);
 
 }

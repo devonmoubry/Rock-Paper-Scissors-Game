@@ -28,6 +28,7 @@ $g_p1scissors.on('click', function(){ play('scissors'); });
 
 
 function play(p1choice) {
+  console.log('\n::: start play! :::');
   console.log('Player 1 chose: ' + p1choice);
 
   var p2choice = computerChoice();
