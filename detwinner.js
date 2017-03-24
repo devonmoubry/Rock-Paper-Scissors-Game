@@ -34,3 +34,24 @@ function determineRoundWinner(p1choice,p2choice) {
 
 // call displayResults and pass in result
 // displayResults(result);
+
+
+
+
+function displayRoundResults(winner){
+  var displayText = '';
+  if (winner === 'tie') {
+  console.log('TIE, Try to Win!!!');
+  }
+  else if (winner === 'player1'){
+    console.log('Winner: Player 1 wins round');
+
+  }
+  else if (winner === 'player2'){
+    console.log('Winner: Player 2 wins round');
+  }
+  else {
+    console.log('ERROR');
+  }
+
+}
