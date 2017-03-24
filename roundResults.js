@@ -19,9 +19,9 @@ function roundResults(winner) {
 
     // else, someone won
     if(winner === 'player1') {
-      $g_p1wins++;
+      g_p1score++;
     } else if (winner === 'player2') {
-      $g_p2wins++;
+      g_p2score++;
     } else {
       console.log('something not right in roundResults');
     }
@@ -39,9 +39,9 @@ function roundResults(winner) {
 
 
 function isEndOfMatch() {
-  if( $g_p1wins - $g_p2wins >= 2 ||
-      $g_p2wins - $g_p1wins >= 2 ||
-      $g_p1wins === 3 || $g_p2wins === 3 ) {
+  if( g_p1score - g_p2score >= 2 ||
+      g_p2score - g_p1score >= 2 ||
+      g_p1score === 3 || g_p2score === 3 ) {
     return true;
   } else {
     return false;
