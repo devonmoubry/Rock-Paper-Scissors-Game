@@ -34,3 +34,16 @@ function determineWinner(p1choice,p2choice) {
 
 // call displayResults and pass in result
 // displayResults(result);
+
+
+p1score = getElementById('playeronescore'),
+p2score = getElementById('playertwoscore'),
+
+function displayRoundResults(winner){
+
+
+
+
+
+
+}
