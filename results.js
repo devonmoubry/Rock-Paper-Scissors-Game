@@ -1,4 +1,4 @@
-function displayWinner(winner) {
+function displayMatchWinner(winner) {
   console.log('\n::: Displaying Winner :::');
   if (winner === 'tie') {
     console.log('It’s a tie! Everybody is a winner!');
