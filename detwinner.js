@@ -27,8 +27,8 @@ function determineWinner(p1choice,p2choice) {
     console.log('no winner! (ERROR???)');
     winner = undefined;
   }
-  console.log('Winner Determined : ' + winner);
-  displayWinner(winner);
+  console.log('Round Winner : ' + winner);
+  roundResults(winner);
 
 }
 

@@ -1,7 +1,7 @@
 
 /*
 'tie'
-'player2'
+'player1'
 'player2'
 */
 
@@ -12,36 +12,36 @@ function roundResults(winner) {
   if(winner === 'tie') {
     console.log(':: Round Result: It\'s a tie!');
     // if yes, display round results and return allow to play again
-    // displayRoundResults(winner);
-    // disableControls(false);
+    displayRoundResults(winner);
+    disableControls(false);
 
   } else {
 
     // else, someone won
     if(winner === 'player1') {
-      g_p1score++;
+      g_p1Score++;
     } else if (winner === 'player2') {
-      g_p2score++;
+      g_p2Score++;
     } else {
       console.log('something not right in roundResults');
     }
 
-    // displayRoundResults(winner);
-    // displayScore();
+    displayRoundResults(winner);
+    displayScore();
 
     if (isEndOfMatch()) {
       displayMatchWinner(winner);
     } else {
-      // disableControls(false);
+      disableControls(false);
     }
   }
 }
 
 
 function isEndOfMatch() {
-  if( g_p1score - g_p2score >= 2 ||
-      g_p2score - g_p1score >= 2 ||
-      g_p1score === 3 || g_p2score === 3 ) {
+  if( g_p1Score - g_p2Score >= 2 ||
+      g_p2Score - g_p1Score >= 2 ||
+      g_p1Score === 3 || g_p2Score === 3 ) {
     return true;
   } else {
     return false;

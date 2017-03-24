@@ -34,7 +34,7 @@ $g_p1Scissors.on('click', function(){ play('scissors'); });
 
 
 function play(p1choice) {
-  disableControls();
+  disableControls(true);
 
   console.log('\n::: start play! :::');
   console.log('Player 1 chose: ' + p1choice);

@@ -1,5 +1,5 @@
 function displayMatchWinner(winner) {
-  console.log('\n::: Displaying Winner :::');
+  console.log('\n✋ ::: Displaying Winner ::: 🤚');
   if (winner === 'tie') {
     console.log('It’s a tie! Everybody is a winner!');
   } else if (winner === 'player1') {
@@ -9,4 +9,5 @@ function displayMatchWinner(winner) {
   } else {
     console.log('Why can’t you be a team player? Try playing again.');
   }
+  console.log('\n 🔄 Play another match?? \n ');
 }
