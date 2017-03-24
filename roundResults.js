@@ -12,8 +12,8 @@ function roundResults(winner) {
   if(winner === 'tie') {
     console.log(':: Round Result: It\'s a tie!');
     // if yes, display round results and return allow to play again
-    displayRoundResults(winner);
-    disableControls(false);
+    // displayRoundResults(winner);
+    // disableControls(false);
 
   } else {
 
@@ -26,13 +26,13 @@ function roundResults(winner) {
       console.log('something not right in roundResults');
     }
 
-    displayRoundResults(winner);
-    displayScore();
+    // displayRoundResults(winner);
+    // displayScore();
 
     if (isEndOfMatch()) {
       displayMatchWinner(winner);
     } else {
-      disableControls(false);
+      // disableControls(false);
     }
   }
 }
