@@ -10,4 +10,8 @@ function displayMatchWinner(winner) {
     console.log('Why can’t you be a team player? Try playing again.');
   }
   console.log('\n 🔄 Play another match?? \n ');
+
+  var $btnRestart = $('<button class="btn btn-play-again">Play Again</button>');
+  $g_statusDisplay.append($btnRestart);
+  $btnRestart.on('click', function(){ restartMatch($btnRestart) });
 }
