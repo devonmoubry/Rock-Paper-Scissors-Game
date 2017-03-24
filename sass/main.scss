@@ -13,5 +13,7 @@ $color-borders: #E0E3DA;
 
 /* Import partials =================== */
 @import "base";
+@import "main-menu";
+@import "character-select";
 @import "playspace";
 @import "inbox";

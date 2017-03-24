@@ -54,4 +54,4 @@ function displayRoundResults(winner){
     console.log('ERROR');
   }
 
-};
+}

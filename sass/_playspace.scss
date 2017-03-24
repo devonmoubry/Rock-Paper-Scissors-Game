@@ -1,5 +1,9 @@
 .playspace {
   display: flex;
+
+  > div {
+    border: 1px solid pink;
+  }
 }
 .player1, .status, .player2 {
   flex: 1;
