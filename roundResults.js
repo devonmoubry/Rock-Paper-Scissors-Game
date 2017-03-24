@@ -10,8 +10,7 @@ function roundResults(winner) {
   // is it end of match? check the score
 
   if(winner === 'tie') {
-    console.log(':: Round Result: It\'s a tie!');
-    // if yes, display round results and return allow to play again
+
     displayRoundResults(winner);
     disableControls(false);
 

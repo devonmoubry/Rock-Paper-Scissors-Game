@@ -36,7 +36,7 @@ $g_p1Scissors.on('click', function(){ play('scissors'); });
 function play(p1choice) {
   disableControls(true);
 
-  console.log('\n::: start play! :::');
+  console.log('\n::: Round GO! :::');
   console.log('Player 1 chose: ' + p1choice);
 
   var p2choice = computerChoice();

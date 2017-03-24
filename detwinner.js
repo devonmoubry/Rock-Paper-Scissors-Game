@@ -6,7 +6,6 @@
 
 
 function determineRoundWinner(p1choice,p2choice) {
-  console.log('\n::: Comparing Choices :::');
   var winner = "";
   if (p1choice === p2choice) {
     winner = "tie";
@@ -27,7 +26,6 @@ function determineRoundWinner(p1choice,p2choice) {
     console.log('no winner! (ERROR???)');
     winner = undefined;
   }
-  console.log('Round Winner : ' + winner);
   roundResults(winner);
 
 }
@@ -39,6 +37,7 @@ function determineRoundWinner(p1choice,p2choice) {
 
 
 function displayRoundResults(winner){
+  console.log('\n::: Round Results :::');
   var displayText = '';
   if (winner === 'tie') {
   console.log('TIE, Try to Win!!!');
