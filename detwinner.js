@@ -36,14 +36,22 @@ function determineWinner(p1choice,p2choice) {
 // displayResults(result);
 
 
-p1score = getElementById('playeronescore'),
-p2score = getElementById('playertwoscore'),
+
 
 function displayRoundResults(winner){
+  var displayText = '';
+  if (winner === 'tie') {
+  console.log('TIE, Try to Win!!!');
+  }
+  else if (winner === 'player1'){
+    console.log('Winner: Player 1 wins round');
 
+  }
+  else if (winner === 'player2'){
+    console.log('Winner: Player 2 wins round');
+  }
+  else {
+    console.log('ERROR');
+  }
 
-
-
-
-
-}
+};
