@@ -5,7 +5,7 @@
 
 
 
-function determineWinner(p1choice,p2choice) {
+function determineRoundWinner(p1choice,p2choice) {
   console.log('\n::: Comparing Choices :::');
   var winner = "";
   if (p1choice === p2choice) {

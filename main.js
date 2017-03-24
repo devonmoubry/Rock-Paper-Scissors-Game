@@ -42,7 +42,7 @@ function play(p1choice) {
   var p2choice = computerChoice();
   console.log('Player 2 chose: ' + p2choice);
 
-  determineWinner(p1choice, p2choice);
+  determineRoundWinner(p1choice, p2choice);
 }
 
 
