@@ -1,3 +1,9 @@
 .main-menu {
-  display: none;
+  display: none;  
+}
+
+.viewing-main-menu {
+  .main-menu {
+    display: block;
+  }
 }
