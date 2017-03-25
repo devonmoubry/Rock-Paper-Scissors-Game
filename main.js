@@ -11,6 +11,8 @@ var $g_p1ScoreDisplay = $('.playeronescore');
 var $g_p2ScoreDisplay = $('.playertwoscore');
 var $g_statusDisplay = $('.status');
 var $g_roundResultWindow = $('.roundresultswindow');
+var $g_matchResultsWindow = $('.matchresultswindow');
+
 
 var g_p1Score = 0;
 var g_p2Score = 0;
