@@ -8,3 +8,26 @@
 .player1, .status, .player2 {
   flex: 1;
 }
+
+.status {
+  border: 1px solid yellow;
+
+  .scoreboard {
+    background-color: #ccc;
+    padding: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    border: 1px solid grey;
+  }
+
+  .playeronescore .slash .playertwoscore {
+    
+  }
+}
+
+
+.player2 p {
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+}
