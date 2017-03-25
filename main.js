@@ -7,6 +7,9 @@
 var player1 = new Character('player1', true, 'Un0');
 // var player2 = new Character('player2', true, 'd0s');
 
+var $g_gameContainer = $('#game-container');
+var $g_btnStartGame = $('.btn-start-game');
+
 var $g_p1ScoreDisplay = $('.playeronescore');
 var $g_p2ScoreDisplay = $('.playertwoscore');
 var $g_statusDisplay = $('.status');
@@ -19,8 +22,13 @@ var g_p2Score = 0;
 
 
 
+function startGame() {
+  $g_gameContainer.removeClass();
+  $g_gameContainer.addClass('viewing-playspace');
+}
 
 
+$g_btnStartGame.on('click', startGame);
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -50,6 +58,5 @@ function disableControls(state) {
 
 
 
-console.log(player1);
 player1.renderPlayer();
 // player2.renderPlayer();
