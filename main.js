@@ -4,10 +4,8 @@
     Global Config
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-
-var $g_p1Rock = $('.player1 .btn-rock');
-var $g_p1Paper = $('.player1 .btn-paper');
-var $g_p1Scissors = $('.player1 .btn-scissors');
+var player1 = new Character('player1', true, 'Un0');
+// var player2 = new Character('player2', true, 'd0s');
 
 var $g_p1ScoreDisplay = $('.playeronescore');
 var $g_p2ScoreDisplay = $('.playertwoscore');
@@ -17,20 +15,15 @@ var g_p1Score = 0;
 var g_p2Score = 0;
 
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    Logic, handled by event handlers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
-$g_p1Rock.on('click', function(){ play('rock'); });
-$g_p1Paper.on('click', function(){ play('paper'); });
-$g_p1Scissors.on('click', function(){ play('scissors'); });
 
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++
     Functions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 
 
 
@@ -48,7 +41,12 @@ function play(p1choice) {
 
 
 function disableControls(state) {
-  $g_p1Rock.prop( "disabled", state );
-  $g_p1Paper.prop( "disabled", state );
-  $g_p1Scissors.prop( "disabled", state );
+  player1.disableControls(state);
+  // player2.disableControls(state);
 }
+
+
+
+console.log(player1);
+player1.renderPlayer();
+// player2.renderPlayer();

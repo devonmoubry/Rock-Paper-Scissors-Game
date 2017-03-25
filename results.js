@@ -13,5 +13,5 @@ function displayMatchWinner(winner) {
 
   var $btnRestart = $('<button class="btn btn-play-again">Play Again</button>');
   $g_statusDisplay.append($btnRestart);
-  $btnRestart.on('click', function(){ restartMatch($btnRestart) });
+  $btnRestart.on('click', function(){ restartMatch($btnRestart); });
 }
