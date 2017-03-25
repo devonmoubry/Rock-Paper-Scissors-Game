@@ -1,7 +1,12 @@
 html {
   font-size: 0.625rem; /* 10px equivalent thanks to default of 16px */
-  background: $color-background;
-  color: $color-text-primary;
+  background: $color-dark-1;
+  color: $color-text-light;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 body {

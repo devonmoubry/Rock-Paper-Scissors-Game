@@ -1,15 +1,25 @@
 /* Include libraries =================== */
 //@import "libraries/node_modules/bourbon/app/assets/stylesheets/bourbon";
 //@import "libraries/node_modules/bourbon-neat/core/neat";
- 
+
+
+/* color schemes:
+http://colorhunt.co/c/65846
+http://colorhunt.co/c/65139
 
 /* Define color variables =================== */
-$color-primary: #A593E0;
-$color-text-primary: #566270;
-$color-link: $color-primary;
+$color-text-light: #e5f9f3;
+$color-bg-1: #90F6D7;
+$color-bg-2: #41506B;
+$color-dark-1: #263849;
+$color-alert-1: #f29d67;
+$color-alert-major: #F92727;
+
+
+$color-link: #fff;
 $color-link-hover: #222;
-$color-background: #fff;
-$color-borders: #E0E3DA;
+
+
 
 /* Import partials =================== */
 @import "base";

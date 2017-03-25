@@ -11,6 +11,10 @@
 
 
 .playspace {
+  padding: 4rem;
+  background: $color-bg-2;
+  height: 100vh;
+
   > div {
     border: 1px solid pink;
   }
