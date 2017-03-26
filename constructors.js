@@ -25,7 +25,7 @@ Character.prototype.renderPlayer  = function(){
       $button.addClass('btn');
       $button.addClass('btn-' + ability);
       $controlsContainer.append($button);
-      $button.on('click', function(){ play(ability); });
+      $button.on('click', function(event){ play(event.target.innerHTML); });
     }
   } else {
     $controlsContainer.append('<p class="cpu-player">💻</p>');
