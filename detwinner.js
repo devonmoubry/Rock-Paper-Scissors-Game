@@ -39,22 +39,25 @@ function determineRoundWinner(p1choice,p2choice) {
 function displayRoundResults(winner){
   console.log('\n::: Round Results :::');
 
-  if (winner === 'tie') {
+  var $roundResultsAlert = $('<p class="round-results">');
 
+  if (winner === 'tie') {
   console.log('TIE, Try to Win!!!');
-  $g_roundResultWindow.html('Tie, Try to Win!!!')
+  $roundResultsAlert.html('Tie, Try to Win!!!');
   }
   else if (winner === 'player1'){
-    console.log('Winner: Player 1 wins round');
-$g_roundResultWindow.html('Winner: Player 1 Wins round')
+    console.log('Player 1 wins round');
+    $roundResultsAlert.html('Player 1 Wins round');
   }
   else if (winner === 'player2'){
-    console.log('Winner: Player 2 wins round');
-$g_roundResultWindow.html('Winner: Player 2 wins round')
+    console.log('Player 2 wins round');
+    $roundResultsAlert.html('Player 2 wins round');
   }
   else {
     console.log('ERROR');
-    $g_roundResultWindow.html('ERROR');
+    $roundResultsAlert.html('ERROR');
   }
+
+  $g_roundResultWindow.html($roundResultsAlert);
 
 }

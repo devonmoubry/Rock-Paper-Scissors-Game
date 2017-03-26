@@ -13,35 +13,96 @@
 .playspace {
   padding: 4rem;
   background: $color-bg-2;
-  height: 100vh;
+  min-height: 100vh;
 
   > div {
-    border: 1px solid pink;
+
   }
 }
 .player1, .status, .player2 {
   flex: 1;
 }
 
+.player {
+  padding: 3rem;
+
+  h3 {
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.player-name {
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+
+.player1 .player-name, .player1 h3 {
+  text-align: right;
+}
+
 .status {
-  border: 1px solid yellow;
 
   .scoreboard {
-    background-color: #ccc;
-    padding: 2rem;
+    background-color: rgba($color-alert-major, .65);
+    padding: 3rem 1rem;
     text-align: center;
-    font-size: 4rem;
-    border: 1px solid grey;
+    font-size: 5rem;
+    border-radius: 10rem;
+  }
+
+  .slash {
+    // display: inline-block;
+    // width: 0;
+    // font-size: 8rem;
+    opacity: .5;
   }
 
   .playeronescore .slash .playertwoscore {
-
   }
 }
 
 
-.player2 p {
-  font-size: 8rem;
+.cpu-player {
+  font-size: 12rem;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+
+
+.round-results, .match-results, .play-again-prompt {
+  background: $color-dark-1;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 2rem;
+}
+
+.match-results {
+  background: $color-alert-major;
+}
+
+.play-again-prompt {
+  background: rgba($color-alert-1, .5);
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 6rem;
+  border-radius: .2rem;
+}
+.playspace .btn-play-again {
+  background: $color-alert-1;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 4rem;
+
+  &:hover {
+    background: rgba($color-alert-major, .7);
+  }
 }

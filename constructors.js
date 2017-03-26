@@ -15,22 +15,56 @@ function Character(player, isHuman, name) {
 Character.prototype.renderPlayer  = function(){
   var $controlsContainer = $('<div>');
   $('.' + this.player)
-    .append('<p>' + this.name + '</p>')
+    .append('<p class="player-name">' + this.name + ' <span class="mood-emoji">😶</span></p>')
     .append($controlsContainer);
 
-  for(var key in this.abilities) {
-    var $button = $('<button>');
-    $button.html(key);
-    $button.addClass('btn');
-    $button.addClass('btn-' + key);
-    $controlsContainer.append($button);
-    $button.on('click', function(){ play(key); });
+  if(this.isHuman){
+    for(var ability in this.abilities) {
+      var $button = $('<button>');
+      $button.html(ability);
+      $button.addClass('btn');
+      $button.addClass('btn-' + ability);
+      $controlsContainer.append($button);
+      $button.on('click', function(){ play(ability); });
+    }
+  } else {
+    $controlsContainer.append('<p class="cpu-player">💻</p>');
   }
+
 };
 
 Character.prototype.disableControls = function(state) {
-  for(var key in this.abilities) {
-    var $currentButton = $('.' + this.player + ' .btn-' + key);
-    $currentButton.prop( "disabled", state );
+  if(this.isHuman) {
+    for(var key in this.abilities) {
+      var $currentButton = $('.' + this.player + ' .btn-' + key);
+      $currentButton.prop( "disabled", state );
+    }
   }
 };
+
+
+Character.prototype.react = function(mood) {
+  // this can be called at any time to alter character display and trigger certain reactions
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

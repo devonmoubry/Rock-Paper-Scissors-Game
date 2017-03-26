@@ -26,3 +26,51 @@ a:hover {
 h3 {
   margin-top: 6rem;
 }
+
+.btn {
+  appearance: none;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background: $color-text-light;
+  color: $color-dark-1;
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0 .3rem .6rem -.2rem $color-bg-2,
+              0 .5rem 2rem -.7rem rgba($color-dark-1, 1);
+  cursor: pointer;
+  transition: .35s ease all;
+  outline: none;
+  border: .4rem solid transparent;
+
+  &:hover {
+    background: $color-bg-1;
+    transition: .1s ease all;
+  }
+
+  &:focus {
+    border: .4rem solid #20c1b7;
+    transition: .1s ease all;
+  }
+
+  &:active {
+    transform: translate(0, .2rem);
+    transition: 0s linear all !important;
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: .3;
+    cursor: auto;
+    &:hover {
+      background: $color-text-light;
+      color: $color-dark-1;
+    }
+  }
+}
+
+.playspace .btn {
+  display: block;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
