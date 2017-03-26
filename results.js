@@ -4,10 +4,8 @@ function displayMatchWinner(winner) {
     var $matchResultsAlert = $('<p class="match-results">');
 
     if (winner === 'tie') {
-        console.log('It’s a tie! Everybody is a winner!'
-            player1.react('mood-round-tied'); player2.react('mood-round-tied');
-        );
-
+        console.log('It’s a tie! Everybody is a winner!');
+        player1.react('mood-round-tied'); player2.react('mood-round-tied');
     } else if (winner === 'player1') {
         console.log('Player1 wins! You da bomb!');
         $matchResultsAlert.html('Player1 wins! You da bomb!');
@@ -21,8 +19,8 @@ function displayMatchWinner(winner) {
     } else {
         console.log('Why can’t you be a team player? Try playing again.');
         $matchResultsAlert.html('Why can’t you be a team player? Try playing again.');
-        player1.react('mood-neutral')
-        player2.react('mood-neutral')
+        player1.react('mood-neutral');
+        player2.react('mood-neutral');
     }
     console.log('\n 🔄 Play another match?? \n ');
 

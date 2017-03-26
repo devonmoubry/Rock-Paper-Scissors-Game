@@ -43,8 +43,8 @@ function displayRoundResults(winner) {
     if (winner === 'tie') {
         console.log('TIE, Try to Win!!!');
         $roundResultsAlert.html('Tie, Try to Win!!!');
-        player1.react('mood-round-tied')
-        player2.react('mood-round-tied')
+        player1.react('mood-round-tied');
+        player2.react('mood-round-tied');
     } else if (winner === 'player1') {
         console.log('Player 1 wins round');
         $roundResultsAlert.html('Player 1 Wins round');
@@ -54,7 +54,7 @@ function displayRoundResults(winner) {
         console.log('Player 2 wins round');
         $roundResultsAlert.html('Player 2 wins round');
         player1.react('mood-match-lost');
-        player2.react('mood-match-won')
+        player2.react('mood-match-won');
     } else {
         console.log('ERROR');
         $roundResultsAlert.html('ERROR');
