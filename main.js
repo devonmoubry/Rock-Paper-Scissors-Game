@@ -5,7 +5,7 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 var player1 = new Character('player1', true, 'Un0');
-// var player2 = new Character('player2', true, 'd0s');
+var player2 = new Character('player2', false, 'd0s');
 
 var $g_gameContainer = $('#game-container');
 var $g_btnStartGame = $('.btn-start-game');
@@ -53,10 +53,10 @@ function play(p1choice) {
 
 function disableControls(state) {
   player1.disableControls(state);
-  // player2.disableControls(state);
+  player2.disableControls(state);
 }
 
 
 
 player1.renderPlayer();
-// player2.renderPlayer();
+player2.renderPlayer();
