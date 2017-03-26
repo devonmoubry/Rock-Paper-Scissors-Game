@@ -13,7 +13,7 @@ function Character(player, isHuman, name) {
 
 
 Character.prototype.renderPlayer  = function(){
-  var $controlsContainer = $('<div>');
+  var $controlsContainer = $('<div class="player-controls">');
   $('.' + this.player)
     .append('<p class="player-name">' + this.name + ' <span class="mood-emoji">😶</span></p>')
     .append($controlsContainer);

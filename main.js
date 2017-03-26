@@ -19,6 +19,8 @@ var $g_matchResultsWindow = $('.matchresultswindow');
 
 var g_p1Score = 0;
 var g_p2Score = 0;
+var g_p1Choice;
+var g_p2Choice;
 
 
 
@@ -38,16 +40,18 @@ $g_btnStartGame.on('click', startGame);
 
 
 
-function play(p1choice) {
+function play(p1Choice) {
   disableControls(true);
 
   console.log('\n::: Round GO! :::');
-  console.log('Player 1 chose: ' + p1choice);
+  console.log('Player 1 chose: ' + p1Choice);
 
-  var p2choice = computerChoice();
-  console.log('Player 2 chose: ' + p2choice);
+  var p2Choice = computerChoice();
+  console.log('Player 2 chose: ' + p2Choice);
 
-  determineRoundWinner(p1choice, p2choice);
+  g_p1Choice = p1Choice;
+  g_p2Choice = p2Choice;
+  determineRoundWinner();
 }
 
 
