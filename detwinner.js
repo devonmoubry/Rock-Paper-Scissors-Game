@@ -5,28 +5,27 @@
 
 
 
-function determineRoundWinner(p1choice,p2choice) {
-  var winner = "";
-  if (p1choice === p2choice) {
-    winner = "tie";
-  }
-  else if (p1choice === 'rock' && p2choice === 'paper') {
-    winner = 'player2'; }
-  else if (p1choice === 'rock' && p2choice === 'scissors') {
-    winner =  'player1';  }
-  else if (p1choice === 'scissors' && p2choice === 'rock') {
-    winner =  'player2'; }
-  else if (p1choice === 'scissors' && p2choice === 'paper') {
-    winner = 'player1'; }
-  else if (p1choice === 'paper' && p2choice === 'scissors') {
-    winner = 'player2'; }
-  else if (p1choice === 'paper' && p2choice === 'rock') {
-    winner = 'player1'; }
-  else {
-    console.log('no winner! (ERROR???)');
-    winner = undefined;
-  }
-  roundResults(winner);
+function determineRoundWinner(p1choice, p2choice) {
+    var winner = "";
+    if (p1choice === p2choice) {
+        winner = "tie";
+    } else if (p1choice === 'rock' && p2choice === 'paper') {
+        winner = 'player2';
+    } else if (p1choice === 'rock' && p2choice === 'scissors') {
+        winner = 'player1';
+    } else if (p1choice === 'scissors' && p2choice === 'rock') {
+        winner = 'player2';
+    } else if (p1choice === 'scissors' && p2choice === 'paper') {
+        winner = 'player1';
+    } else if (p1choice === 'paper' && p2choice === 'scissors') {
+        winner = 'player2';
+    } else if (p1choice === 'paper' && p2choice === 'rock') {
+        winner = 'player1';
+    } else {
+        console.log('no winner! (ERROR???)');
+        winner = undefined;
+    }
+    roundResults(winner);
 
 }
 
@@ -36,28 +35,31 @@ function determineRoundWinner(p1choice,p2choice) {
 
 
 
-function displayRoundResults(winner){
-  console.log('\n::: Round Results :::');
+function displayRoundResults(winner) {
+    console.log('\n::: Round Results :::');
 
-  var $roundResultsAlert = $('<p class="round-results">');
+    var $roundResultsAlert = $('<p class="round-results">');
 
-  if (winner === 'tie') {
-  console.log('TIE, Try to Win!!!');
-  $roundResultsAlert.html('Tie, Try to Win!!!');
-  }
-  else if (winner === 'player1'){
-    console.log('Player 1 wins round');
-    $roundResultsAlert.html('Player 1 Wins round');
-  }
-  else if (winner === 'player2'){
-    console.log('Player 2 wins round');
-    $roundResultsAlert.html('Player 2 wins round');
-  }
-  else {
-    console.log('ERROR');
-    $roundResultsAlert.html('ERROR');
-  }
+    if (winner === 'tie') {
+        console.log('TIE, Try to Win!!!');
+        $roundResultsAlert.html('Tie, Try to Win!!!');
+        player1.react('mood-round-tied')
+        player2.react('mood-round-tied')
+    } else if (winner === 'player1') {
+        console.log('Player 1 wins round');
+        $roundResultsAlert.html('Player 1 Wins round');
+        player1.react('mood-match-won');
+        player2.react('mood-match-lost');
+    } else if (winner === 'player2') {
+        console.log('Player 2 wins round');
+        $roundResultsAlert.html('Player 2 wins round');
+        player1.react('mood-match-lost');
+        player2.react('mood-match-won')
+    } else {
+        console.log('ERROR');
+        $roundResultsAlert.html('ERROR');
+    }
 
-  $g_roundResultWindow.html($roundResultsAlert);
+    $g_roundResultWindow.html($roundResultsAlert);
 
 }
