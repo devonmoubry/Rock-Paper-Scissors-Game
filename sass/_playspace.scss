@@ -83,6 +83,7 @@
   padding: 2rem;
   margin: 2rem 0;
   border-radius: 2rem;
+  @include clearfix;
 }
 
 .match-results {
@@ -105,4 +106,37 @@
   &:hover {
     background: rgba($color-alert-major, .7);
   }
+}
+
+
+.choice-p1, .choice-p2 {
+  display: block;
+  font-family: FontAwesome;
+}
+.choice-p1 {
+  float: left;
+}
+.choice-p2 {
+  float: right;
+}
+.choice-p1.rock::before, .choice-p2.rock::before {
+  content: '\f255'; }
+.choice-p1.paper::before, .choice-p2.paper::before {
+  content: '\f256'; }
+.choice-p1.scissors::before, .choice-p2.scissors::before {
+  content: '\f257'; }
+
+.player-controls .btn::before {
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.btn-rock::before {
+  content: '\f255';
+}
+.btn-paper::before {
+  content: '\f256';
+}
+.btn-scissors::before {
+  content: '\f257';
 }

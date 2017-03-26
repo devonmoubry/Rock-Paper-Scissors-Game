@@ -5,28 +5,27 @@
 
 
 
-function determineRoundWinner(p1choice, p2choice) {
+function determineRoundWinner() {
     var winner = "";
-    if (p1choice === p2choice) {
+    if (g_p1Choice === g_p2Choice) {
         winner = "tie";
-    } else if (p1choice === 'rock' && p2choice === 'paper') {
+    } else if (g_p1Choice === 'rock' && g_p2Choice === 'paper') {
         winner = 'player2';
-    } else if (p1choice === 'rock' && p2choice === 'scissors') {
+    } else if (g_p1Choice === 'rock' && g_p2Choice === 'scissors') {
         winner = 'player1';
-    } else if (p1choice === 'scissors' && p2choice === 'rock') {
+    } else if (g_p1Choice === 'scissors' && g_p2Choice === 'rock') {
         winner = 'player2';
-    } else if (p1choice === 'scissors' && p2choice === 'paper') {
+    } else if (g_p1Choice === 'scissors' && g_p2Choice === 'paper') {
         winner = 'player1';
-    } else if (p1choice === 'paper' && p2choice === 'scissors') {
+    } else if (g_p1Choice === 'paper' && g_p2Choice === 'scissors') {
         winner = 'player2';
-    } else if (p1choice === 'paper' && p2choice === 'rock') {
+    } else if (g_p1Choice === 'paper' && g_p2Choice === 'rock') {
         winner = 'player1';
     } else {
         console.log('no winner! (ERROR???)');
         winner = undefined;
     }
     roundResults(winner);
-
 }
 
 // call displayResults and pass in result
@@ -59,7 +58,10 @@ function displayRoundResults(winner) {
         console.log('ERROR');
         $roundResultsAlert.html('ERROR');
     }
-
+    $roundResultsAlert.append('<div class="round-choices">' +
+                                '<span class="choice-p1 ' + g_p1Choice + '"></span>' +
+                                '<span class="choice-p2 ' + g_p2Choice + '"></span>' +
+                              '</div>');
     $g_roundResultWindow.html($roundResultsAlert);
 
 }
