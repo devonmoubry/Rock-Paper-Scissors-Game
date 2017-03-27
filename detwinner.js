@@ -42,18 +42,20 @@ function displayRoundResults(winner) {
     if (winner === 'tie') {
         console.log('TIE, Try to Win!!!');
         $roundResultsAlert.html('Tie, Try to Win!!!');
+        console.log(player1);
+        console.log(player2);
         player1.react('mood-round-tied');
         player2.react('mood-round-tied');
     } else if (winner === 'player1') {
         console.log('Player 1 wins round');
         $roundResultsAlert.html('Player 1 Wins round');
-        player1.react('mood-match-won');
-        player2.react('mood-match-lost');
+        player1.react('mood-round-won');
+        player2.react('mood-round-lost');
     } else if (winner === 'player2') {
         console.log('Player 2 wins round');
         $roundResultsAlert.html('Player 2 wins round');
-        player1.react('mood-match-lost');
-        player2.react('mood-match-won');
+        player1.react('mood-round-lost');
+        player2.react('mood-round-won');
     } else {
         console.log('ERROR');
         $roundResultsAlert.html('ERROR');

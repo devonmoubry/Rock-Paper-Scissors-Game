@@ -1,47 +1,47 @@
 .mood-neutral {
-  background: white;
+  background: rgba($color-dark-1, .2);
 }
 
-.mood-neutral .mood-emoji {
+.mood-neutral .mood-emoji::before {
   content: '😶';
 }
 
 .mood-round-won {
-  background: white;
+  background: rgba($color-bg-1, .2);
 }
 
-.mood-round-won .mood-emoji {
+.mood-round-won .mood-emoji::before {
   content: '😃';
 }
 
 .mood-round-lost {
-  background: white;
+  background: rgba($color-alert-major, .15);
 }
 
-.mood-round-lost .mood-emoji {
+.mood-round-lost .mood-emoji::before {
   content: '😂';
 }
 
 .mood-round-tied {
-  background: white;
+  background: rgba($color-alert-1, .2);
 }
 
-.mood-round-tied .mood-emoji {
-  content: '😶';
+.mood-round-tied .mood-emoji::before {
+  content: '😬';
 }
 
 .mood-match-won {
-  background: white;
+  background: rgba($color-bg-1, .5);
 }
 
-.mood-match-won .mood-emoji {
+.mood-match-won .mood-emoji::before {
   content: '😁';
 }
 
 .mood-match-lost {
-  background: white;
+  background: rgba($color-alert-major, .5);
 }
 
-.mood-match-lost .mood-emoji {
+.mood-match-lost .mood-emoji::before {
   content: '😭';
 }
