@@ -19,11 +19,14 @@
 
   }
 }
-.player1, .status, .player2 {
-  flex: 1;
+
+.status {
+  flex: 10;
+  padding: 0 2rem;
 }
 
 .player {
+  flex: 8;
   padding: 3rem;
 
   h3 {

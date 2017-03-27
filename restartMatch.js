@@ -7,4 +7,6 @@ function restartMatch($itemToRemove) {
   $g_matchResultsWindow.html('');
   $itemToRemove.remove();
   disableControls(false);
+  player1.react('mood-neutral');
+  player2.react('mood-neutral');
 }
