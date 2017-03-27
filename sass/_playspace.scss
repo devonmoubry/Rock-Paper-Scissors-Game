@@ -87,6 +87,7 @@
   margin: 2rem 0;
   border-radius: 2rem;
   @include clearfix;
+  text-align: center;
 }
 
 .match-results {
@@ -123,11 +124,14 @@
   float: right;
 }
 .choice-p1.rock::before, .choice-p2.rock::before {
-  content: '\f255'; }
+  content: '\f255';
+    font-size: 4rem; }
 .choice-p1.paper::before, .choice-p2.paper::before {
-  content: '\f256'; }
+  content: '\f256';
+    font-size: 4rem; }
 .choice-p1.scissors::before, .choice-p2.scissors::before {
-  content: '\f257'; }
+  content: '\f257';
+    font-size: 4rem; }
 
 .player-controls .btn::before {
   font-family: FontAwesome;
